@@ -1,0 +1,46 @@
+dn: ou=usuarios,dc=centro,dc=local
+objectClass: organizationalUnit
+ou: usuarios
+
+dn: ou=grupos,dc=centro,dc=local
+objectClass: organizationalUnit
+ou: grupos
+
+dn: cn=profesores,ou=grupos,dc=centro,dc=local
+objectClass: posixGroup
+cn: profesores
+gidNumber: 5000
+memberUid: profKevinHdez
+
+dn: cn=alumnos,ou=grupos,dc=centro,dc=local
+objectClass: posixGroup
+cn: alumnos
+gidNumber: 5001
+memberUID: KevinHdez
+
+dn: uid=KevinHdez,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: KevinHdez
+sn: Hdez
+uid: KevinHdez
+uidNumber: 10000
+gidNumber: 5001
+homeDirectory: /home/KevinHdez
+loginShell: /bin/bash
+userPassword: Kevin123
+
+dn: uid=profKevinHdez,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: profKevinHdez
+sn: Profesor
+uid: profKevinHdez
+uidNumber: 11000
+gidNumber: 5000
+homeDirectory: /home/profKevinHdez
+loginShell: /bin/bash
+userPassword: Profe123
+
